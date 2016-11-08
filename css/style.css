@@ -1,0 +1,486 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: sans-serif;
+  margin: 0;
+  background-image: url(../img/grey.png);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%; /* esto hace que sean IMÁGENES LÍQUIDAS, o sea que se adapten al tamaño del contenedor*/
+}
+
+.img_perfil img {
+  width: 60%
+}
+
+.logo {
+  width: 80px;
+  margin: 0 auto 10px;
+  display: block; /* porque por defecto es inline-block y eso hace que no funcione el margin:auto (en inline block solo funciona el margin de arriba y abajo) */
+  background-color: #333; /* Antes: rgba(0,0,0,0.5); */
+  border-radius: 0 0 13% 13%; /* para que redondee las puntas inferiores de la caja contenedora del logo */
+  padding: 5px;
+}
+
+#responsive_search {
+  overflow: hidden;
+}
+
+#search_categoria, #search_box, #search_button {
+  display: block;
+  float: left;
+  height: 2.1em;
+  font-size: 1.5em;
+  border: 1px solid #dfdfdf;
+}
+
+#search_categoria {
+  width: 25.79%;
+  margin: 0 0 0 0.83%;
+}
+
+#search_box { /* padding es 1px por default */
+  width: 57.10%;
+  margin: 0 0.83%;
+}
+
+#search_button {
+  width: 13.79%;
+  margin: 0 0.83% 0 0;
+}
+
+#boton_logout, #carrito, #tipito_login {
+  display: none;
+}
+
+.toggle-nav { /* nombre de clase viene de http://ionicons.com/ */
+  display: block; /* esto es necesario para que el elemento se pueda centrar en pantalla al aplicarle "margin:auto" */
+  width: 50px;
+  background-color: #333;
+  border-radius: 13%; /* redondea las 4 puntas de la caja que lo contiene */
+  margin: 10px auto; /* separa verticalmente y centra horizontalmente */
+  padding: 10px; /* relleno entre el toggle y los bordes de la caja */
+  color: white;
+  font-size: 2.5em; /* el botón es una tipografía, no una imagen, con lo cual su tamaño se controla on esta propiedad */
+  text-align: center; /* ídem comentario anterior, para centrarlo */
+}
+
+.main-nav {
+  margin: 0 0; /* top&bottom | right&left */
+  overflow: hidden; /* evita que los elementos flotados dentro del mismo se salgan */
+  text-align: center;
+  display: none; /* por defecto no se muestra en mobile a menos que apriete en el toggle */
+}
+
+.main-nav a {
+  text-decoration: none;
+  background: #333;
+  color: white;
+  font-size: 1.5em;
+  padding: .8em;
+  display: block;
+  text-transform: uppercase;
+  border-bottom: solid 1px white;
+  border-radius: 5%;
+}
+
+.banner {
+  display: none;
+}
+
+.product {
+  background-color: rgba(227,227,227,0.2); /* rgba(229,227,277) = #e3e3e3 */
+  width: 98.34%;
+  float: left;
+  margin: 0 .83% 5px .83%;
+  padding: 5px;
+  border: 1px solid #cccccc;
+}
+
+.product h2, .product h3 {
+  white-space: nowrap; /* para que vaya todo en 1 lína */
+  overflow: hidden; /* para que no se salga de la caja si el texto es muy largo */
+  text-overflow: ellipsis; /* para que al cortar el texto largo con la línea anterior, le ponga puntos suspensivos "..." al final */
+  margin-top: 0;
+  margin-bottom: .35em;
+}
+
+.product h2 {
+/* font-size: ???em; */
+}
+
+.product h3 {
+ /* font-size: ???em; */
+}
+
+.product img {
+  /*width: 84.761904761905%;*/
+  width: 76%; /* % del width de la caja ".product" (excluyendo su padding) */
+  margin: 5px 12%;
+}
+
+.product figcaption {
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.buy_button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  width: 76%;
+}
+
+                    .faq {
+                      padding: 0 .415% 15px;
+                    }
+
+                    .faq h1, .faq h2 {
+                      text-align: center;
+                    }
+
+                    .faq h1 {
+                      font-size: 3em;
+                      margin: 5px 0 10px 0;
+                    }
+
+                    .faq h2 {
+                      font-size: 1.8em;
+                      margin: 1.2em 0 .3em 0;
+                    }
+
+                    .faq p {
+                      font-size: 1.5em;
+                      margin: 0;
+                      display: none;
+                    }
+
+                    .ion-android-arrow-dropdown {
+                      display: none;
+                    }
+
+.errores {
+  color: red;
+}
+
+.exito {
+  color: green;
+}
+
+#contact_form, #signup_form, #login_form, #recover_form, #contenido_inicio_logueado {
+  background-color: #FFFFFF;
+  width: 80%;
+  margin: 0 auto 10px;
+  padding: 5px;
+  border: 1px solid #dfdfdf;
+  text-align: center;
+}
+
+#contact_form, #signup_form {
+  max-width: 590px;
+}
+
+#login_form, #recover_form, #contenido_inicio_logueado {
+  max-width: 400px;
+}
+
+#signup_form input, #signup_form textarea, #contact_form input, #contact_form textarea, #login_form input, #recover_form input {
+  padding: .3em;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 0 20% 10px 20%;
+  border: 1px solid #dfdfdf;
+}
+
+#login_form input, #recover_form input {
+  max-width: 200px;
+}
+
+#login_form p {
+  margin-top: 0;
+}
+
+#login_form a {
+  text-decoration: none;
+}
+
+#contact_form button, #signup_form button, #login_form button, #recover_form button {
+  padding: .3em;
+  font-size: 1.5em;
+  width: 30%;
+  max-width: 200px;
+  margin: 0 35% 10px 35%;
+  border: 1px solid #dfdfdf;
+}
+
+.main-footer {
+  clear: left;
+  background-color: #333;
+  overflow: hidden;
+  padding: 5px .83%;
+}
+
+.main-footer {
+  margin-bottom: 10px;
+}
+
+.main-footer li {
+  float: left;
+  width: 15.2%;
+  text-align: center;
+}
+
+.main-footer li:first-of-type {
+  margin-left: 12%;
+}
+
+.main-footer li:last-of-type {
+  margin-right: 12%;
+}
+
+.main-footer a {
+  font-size: 3em;
+  color: white;
+  text-decoration: none;
+}
+
+.main-footer p {
+  clear: left;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.ion-iphone {
+  display: none;
+}
+
+/* MEDIA QUERIES con mobile first --> min-width en vez de max-width */
+@media (min-width: 600px) {
+  .toggle-nav {
+    display:none;
+  }
+
+  .main-nav {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .main-nav li {
+    width: 15.0067%; /* = (100 - ? * .83) / 6 % */
+    margin: 0 0.83%;
+    float: left;
+  }
+
+  .main-nav a {
+    padding: 1em 0;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+  }
+
+  .banner, .main-footer {
+    margin-left: 0.83%; /**/
+    margin-right: 0.83%;
+  }
+
+  .vip-products {
+    overflow: hidden;
+    padding: 0 .415%;
+  }
+
+  .product {
+      width: 49.17%;
+      float: left;
+      margin: 0 .415% 5px .415%;
+      padding: 5px;
+      border: 1px solid #cccccc;
+    }
+
+  .main-footer {
+    clear: both;
+  }
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  header {
+    background-color: orange;
+    padding: 0 10px 0 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .logo {
+    border-radius: 0;
+    float: left;
+    width: inherit;
+    height: 110px;
+    margin: 0;
+    padding: 10px;
+    border-radius: none;
+    background-color: transparent;
+  }
+
+  #responsive_search {
+    margin-top: 10px;
+  }
+
+  #search_categoria, #search_box, #search_button {
+    height: 32px;
+  }
+
+  #search_categoria {
+    width: 120px;
+    margin: 0 0 0 0.83%;
+  }
+
+  #search_box { /* padding es 1px por default */
+    width: 40%;
+    margin: 0;
+    border-right: none;
+  }
+
+  #search_button {
+    width: 62px;
+    margin: 0;
+    border-radius: 0 13% 13% 0;
+    border-left: none;
+  }
+
+  #boton_logout {
+    display: block;
+    position: absolute;
+      right: 10.66%;
+      top: 10px;
+  }
+
+  #carrito {
+    display: block;
+    position: absolute;
+      right: 6.16%;
+      top: 10px;
+  }
+
+  #tipito_login {
+    display: block;
+    position: absolute;
+      right: 1.66%;
+      top: 10px;
+  }
+
+  #boton_logout, #carrito, #tipito_login {
+    font-size: 3em;
+    background-color: #333;
+    border-radius: 100%;
+    width: 38px;
+    text-align: center;
+    border: 2px solid white;
+  }
+
+  #boton_logout span {
+    color: red;
+  }
+
+  #tipito_login span, #carrito span {
+    color: white;
+  }
+
+  .main-nav {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+
+  .main-nav li {
+      
+  }
+
+  .banner {
+    display: block; /* muestro lo que en la resolución más chica estaba oculto */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .banner, .main-footer {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .product {
+    width: 32.5033%;
+    margin: 0 .415% 5px .415%;
+    padding: 5px;
+    border: 1px solid #cccccc;
+  }
+
+                      .faq {
+                        overflow: hidden;
+                      }
+
+                      .faq_titulo, .faq_preguntas {
+                        float: left;
+                      }
+
+                      .faq h1 {
+                        text-align: right;
+                      }
+
+                      .faq h2 {
+                        text-align: left;
+                      }
+
+                      .faq_titulo {
+                        width: 45%;
+                        /*border: 1px black solid;*/
+                      }
+
+                      .faq_preguntas {
+                        margin-left: 7%;
+                        width: 48%;
+                        /*border: 1px black solid;*/
+                      }
+
+  .main-footer {
+    text-align: center; /* centra el texto adentro del footer */
+    padding: 30px 0;
+  }
+  .main-footer li {
+    display: inline-block; /* para usar las características de semi-bloque */
+  }
+
+@media (min-width: 1200px) {
+
+  .product {
+    width: 24.17%;
+    margin: 0 .415% 5px .415%;
+    padding: 5px;
+    border: 1px solid #cccccc;
+  }
+
+  .main-footer p {
+    padding-top: 15px;
+  }
+}
