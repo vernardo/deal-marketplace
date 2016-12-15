@@ -1,0 +1,46 @@
+/* Estilos para el display de productos */
+  .thumbnail img {
+    max-resolution: 200px;
+  }
+
+  .thumbnail .author {
+    color: #7f7f7f;
+  }
+
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+/* Estilos para el FAQ */
+  .faq_preguntas p {
+      display: none;
+  }
+
+  span[id*=flechaAbajo_] {
+      display: none;
+  }
+
+/* Estilos para el form de creación de producto */
+
+  .new_product_form form {
+    display: none;
+  }
+
+  span[id*=flechaAbajo] {
+      display: none;
+  }
+
+  img[id="product-detail"] {
+    height: 300px;
+    display: block; /* esta prop y la de margin:auto son para centrar la imagen */
+    margin: auto;
+  }
+
+@media (min-width: 768px) {
+  img[id="product-detail"] { height: 400px; }
+}
+
+@media (min-width: 992px) {
+  img[id="product-detail"] { height: 500px; }
+}
